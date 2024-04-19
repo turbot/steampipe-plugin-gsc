@@ -5,6 +5,7 @@ go 1.21
 require (
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/turbot/steampipe-plugin-sdk/v5 v5.8.0
+	github.com/yterajima/go-sitemap v0.3.1
 	golang.org/x/oauth2 v0.18.0
 	google.golang.org/api v0.172.0
 )
@@ -79,7 +80,6 @@ require (
 	github.com/tkrajina/go-reflector v0.5.6 // indirect
 	github.com/turbot/go-kit v0.9.0-rc.1 // indirect
 	github.com/ulikunitz/xz v0.5.10 // indirect
-	github.com/yterajima/go-sitemap v0.3.1 // indirect
 	github.com/zclconf/go-cty v1.14.1 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.49.0 // indirect
@@ -95,7 +95,7 @@ require (
 	go.opentelemetry.io/proto/otlp v1.0.0 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
 	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1 // indirect
-	golang.org/x/net v0.22.0 // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sync v0.6.0 // indirect
 	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
