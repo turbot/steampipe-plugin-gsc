@@ -193,6 +193,13 @@ func getPagespeedAnalysisColumns() []*plugin.Column {
 			Type:        proto.ColumnType_JSON,
 			Transform:   transform.FromField("UrlInspectionResult.LoadingExperience.Metrics.LARGEST_CONTENTFUL_PAINT_MS.Distributions"),
 		},
+		{
+			Name:        "project",
+			Description: "The GCP Project associated with the credentials in use.",
+			Type:        proto.ColumnType_STRING,
+			Hydrate:     getProject,
+			Transform:   transform.FromValue(),
+		},
 	}
 }
 

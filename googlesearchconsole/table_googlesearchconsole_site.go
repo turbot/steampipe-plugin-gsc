@@ -7,6 +7,7 @@ import (
 
 	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
 )
 
 //// TABLE DEFINITION
@@ -32,6 +33,13 @@ func tableGoogleSearchConsoleSite(_ context.Context) *plugin.Table {
 				Name:        "permission_level",
 				Description: "The user's permission level for the site.",
 				Type:        proto.ColumnType_STRING,
+			},
+			{
+				Name:        "project",
+				Description: "The GCP Project associated with the credentials in use.",
+				Type:        proto.ColumnType_STRING,
+				Hydrate:     getProject,
+				Transform:   transform.FromValue(),
 			},
 		},
 	}

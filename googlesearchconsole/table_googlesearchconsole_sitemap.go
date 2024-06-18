@@ -81,6 +81,13 @@ func tableGoogleSearchConsoleSitemap(_ context.Context) *plugin.Table {
 				Type:        proto.ColumnType_JSON,
 				Transform:   transform.FromField("WmxSitemap.Contents"),
 			},
+			{
+				Name:        "project",
+				Description: "The GCP Project associated with the credentials in use.",
+				Type:        proto.ColumnType_STRING,
+				Hydrate:     getProject,
+				Transform:   transform.FromValue(),
+			},
 		},
 	}
 }

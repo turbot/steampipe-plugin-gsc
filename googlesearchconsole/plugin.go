@@ -11,6 +11,12 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 	p := &plugin.Plugin{
 		Name:             "steampipe-plugin-googlesearchconsole",
 		DefaultTransform: transform.FromCamel().NullIfZero(),
+		ConnectionKeyColumns: []plugin.ConnectionKeyColumn{
+			{
+				Name:    "project",
+				Hydrate: getProject,
+			},
+		},
 		ConnectionConfigSchema: &plugin.ConnectionConfigSchema{
 			NewInstance: ConfigInstance,
 			Schema:      ConfigSchema,
